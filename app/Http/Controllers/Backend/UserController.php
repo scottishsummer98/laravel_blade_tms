@@ -15,10 +15,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $users = User::orderBy('created_at', 'DESC')->paginate(20);
-        return view('users.index', compact('users'))->with('SL', 1);
+        if($request->has('search')){
+            $users = User::where('user_name','like', "%{$request->search}%")
+                    ->orWhere('country','like', "%{$request->search}%")
+                    ->paginate(50);
+        }
+        // dd($users);
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -80,9 +86,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserStoreRequest $request, User $user)
     {
-        //
+        $user->update($request->all());
+        return redirect()->route('users.index')->with('message', 'User Updated Successfully');
     }
 
     /**
@@ -91,8 +98,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index')->with('rmessage', 'User Deleted Successfully');
     }
 }

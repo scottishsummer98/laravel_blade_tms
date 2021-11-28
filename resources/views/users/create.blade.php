@@ -131,7 +131,7 @@
                     <a class="btn btn-primary mr-2" href="{{ route('users.index') }}">Back</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-warning mr-2">Reset</a>
+                    <button type="reset" class="btn btn-warning mr-2">Reset</button>
                 </li>
                 <li class="nav-item">
                     <button type="submit" class="btn btn-success">Save</button>
