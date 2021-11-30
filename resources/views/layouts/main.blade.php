@@ -22,6 +22,8 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
+    @yield('head')
+
 </head>
 
 <body id="page-top">
@@ -79,8 +81,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">All Continent</a>
-                        <a class="collapse-item" href="">All Countries</a>
+                        <a class="collapse-item" href="{{ route('continents.index') }}">All Continent</a>
+                        <a class="collapse-item" href="{{ route('countries.index') }}">All Countries</a>
                     </div>
                 </div>
             </li>
@@ -268,6 +270,11 @@
 
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
+
+
+    @section('footer')
+
+    @show
 
 </body>
 

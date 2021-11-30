@@ -57,36 +57,18 @@
                 <div class="col-md-6">
                     <select id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
                         <option selected disabled>Pick Your Country</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
                         <option value="Bangladesh">Bangladesh</option>
-                        <option value="China">China</option>
-                        <option value="India">India</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="Brazil">Brazil</option>
                         <option value="France">France</option>
                         <option value="Germany">Germany</option>
-                        <option value="Italy">Italy</option>
+                        <option value="India">India</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="South Africa">South Africa</option>
                         <option value="Spain">Spain</option>
                         <option value="United Kingdom">United Kingdom</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Ecudaor">Ecudaor</option>
-                        <option value="Venezuela">Venezuela</option>
+                        <option value="United Kingdom">United States Of America</option> 
                     </select>
                     @error('country')
                         <span class="invalid-feedback" role="alert">

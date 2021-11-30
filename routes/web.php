@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\ContinentController;
+use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -24,3 +26,5 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('users', UserController::class);
+Route::resource('continents', ContinentController::class);
+Route::resource('countries', CountryController::class);

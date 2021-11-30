@@ -56,54 +56,40 @@
                 <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                 <div class="col-md-6">
-                    <select id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country', $user->country) }}" required autocomplete="country" autofocus>
-                        <option selected disabled>Pick Your Country</option>
+                    <select id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country')}}" required autocomplete="country" autofocus>
+                        <option disabled>Pick Your Country</option>
                         <option value="Algeria">Algeria</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="China">China</option>
-                        <option value="India">India</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="United Arab Emirates">United Arab Emirates</option>
-                        <option value="France">France</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Spain">Spain</option>
-                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Australia">Australia</option>
                         <option value="Bahamas">Bahamas</option>
+                        <option value="Bangladesh">Bangladesh</option>
                         <option value="Barbados">Barbados</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
                         <option value="Costa Rica">Costa Rica</option>
                         <option value="Cuba">Cuba</option>
                         <option value="Dominica">Dominica</option>
-                        <option value="Australia">Australia</option>
+                        <option value="Ecudaor">Ecudaor</option>
+                        <option value="Egypt">Egypt</option>
                         <option value="Fiji">Fiji</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="India">India</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Lebanon">Lebanon</option>
                         <option value="New Zealand">New Zealand</option>
                         <option value="Papua New Guinea">Papua New Guinea</option>
                         <option value="Samoa">Samoa</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Ecudaor">Ecudaor</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Spain">Spain</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
                         <option value="Venezuela">Venezuela</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                     @error('country')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" required autocomplete="email">
-
-                    @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -124,5 +110,15 @@
         </div>
     </form>   
 </div>
+
+@endsection
+
+@section('footer')
+
+<script>
+    $(document).ready(function(){
+        $('#country').val('{{$user->country}}')
+    })
+</script>
 
 @endsection
