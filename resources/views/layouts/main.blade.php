@@ -98,9 +98,8 @@
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">Overall Task</a>
-                        <a class="collapse-item" href="">My Tasks</a>
-                        <a class="collapse-item" href="">Assign Tasks</a>
+                        <a class="collapse-item" href="{{ route('tasks.overview') }}">Overall Task</a>
+                        <a class="collapse-item" href="{{ route('tasks.index') }}">My Tasks</a>
                     </div>
                 </div>
             </li>

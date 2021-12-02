@@ -16,12 +16,9 @@
             <div class="col-md-6">
                 <select id="con_code" type="text" class="form-control @error('con_code') is-invalid @enderror" name="con_code" value="{{ old('con_code') }}" required autocomplete="con_code" autofocus>
                     <option selected disabled>Select Continent Code</option>
-                    <option value="AF">Africa</option>
-                    <option value="AS">Asia</option>
-                    <option value="EU">Europe</option>
-                    <option value="NA">North America</option>
-                    <option value="OC">Oceania</option>
-                    <option value="SA">South America</option>
+                    @foreach ($continentlist as $listitem)
+                            <option value="{{ $listitem->con_code }}">{{ $listitem->con_name }}</option>
+                        @endforeach
                 </select>
 
                 @error('con_code')

@@ -34,34 +34,40 @@
     </div>
 
     <div class="card-body">
-        <table class="table table-dark table-striped" style="text-align: center;">
-            <thead>
-                <tr>
-                <th scope="col">SL</th>
-                <th scope="col">Continent Code</th>
-                <th scope="col">Country Code</th>
-                <th scope="col">Country Name</th>
-                <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @php 
-                    $i = $countries->perPage() * ($countries->currentPage() - 1);
-                @endphp
-                @foreach ($countries as $country)
+        @if ($countries->count() > 0 )
+            <table class="table table-dark table-striped" style="text-align: center;">
+                <thead>
                     <tr>
-                        <th scope="row">{{  $loop->index +1 + $i }}</th>
-                        <td>{{  $country->con_code }}</td>
-                        <td>{{  $country->coun_code }}</td>
-                        <td>{{  $country->coun_name }}</td>
-                        <td>
-                            <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="{{ route('countries.edit', $country->id) }}">Edit</a>
-                            <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal{{$country->id}}">Delete</a>
-                        </td>
+                    <th scope="col">SL</th>
+                    <th scope="col">Continent Code</th>
+                    <th scope="col">Country Code</th>
+                    <th scope="col">Country Name</th>
+                    <th scope="col">Action</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @php 
+                        $i = $countries->perPage() * ($countries->currentPage() - 1);
+                    @endphp
+                    @foreach ($countries as $country)
+                        <tr>
+                            <th scope="row">{{  $loop->index +1 + $i }}</th>
+                            <td>{{  $country->con_code }}</td>
+                            <td>{{  $country->coun_code }}</td>
+                            <td>{{  $country->coun_name }}</td>
+                            <td>
+                                <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="{{ route('countries.edit', $country->id) }}">Edit</a>
+                                <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal{{$country->id}}">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <div class="alert alert-danger">
+                <strong>Sorry !</strong> No such Country Found.
+            </div>
+         @endif
     </div>
     <div class="card-footer">
         {{ $countries->links() }}

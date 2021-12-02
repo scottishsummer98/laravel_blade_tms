@@ -11,13 +11,14 @@ class ContinentController extends Controller
 {
     public function index(Request $request)
     {
-        $continents = Continent::orderBy('created_at')->paginate(20);
+        $continents = Continent::orderBy('con_name')->paginate(20);
 
         if($request->has('search')){
-            $continents = Continent::where('con_name','like', "%{$request->search}%")
+            $continents = Continent::where('con_code','like', "{$request->search}")
+                    ->orWhere('con_name','like', "{$request->search}")
                     ->paginate(50);
         }
-        
+    
         return view('continents.index', compact('continents'));
     }
 

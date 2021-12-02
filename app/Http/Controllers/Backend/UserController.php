@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Requests\UserUpdateRequest;
+use App\Models\Country;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -19,7 +20,7 @@ class UserController extends Controller
 
         if($request->has('search')){
             $users = User::where('user_name','like', "%{$request->search}%")
-                    ->orWhere('country','like', "%{$request->search}%")
+                    ->orWhere('country','like', "{$request->search}")
                     ->paginate(50);
         }
         
@@ -29,7 +30,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        $countrylist = Country::orderBy('coun_name')->get();
+        return view('users.create')->with('countrylist', $countrylist);
     }
 
 
@@ -43,14 +45,15 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+        
         return redirect()->route('users.index')->with('message', 'User Created Successfully');
     }
 
 
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+        $countrylist = Country::orderBy('coun_name')->get();
+        return view('users.edit', compact('user','countrylist'));
     }
 
 

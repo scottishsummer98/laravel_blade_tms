@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2021 at 10:56 AM
+-- Generation Time: Dec 02, 2021 at 12:17 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.25
 
@@ -40,12 +40,12 @@ CREATE TABLE `continents` (
 --
 
 INSERT INTO `continents` (`id`, `con_code`, `con_name`, `created_at`, `updated_at`) VALUES
-(1, 'AF', 'Africa', NULL, NULL),
-(2, 'AS', 'Asia', NULL, NULL),
-(3, 'EU', 'Europe', NULL, NULL),
-(4, 'NA', 'North America', NULL, NULL),
-(5, 'OC', 'Oceania', NULL, NULL),
-(6, 'SA', 'South America', NULL, NULL);
+(1, 'AF', 'Africa', '2021-12-02 04:52:59', '2021-12-02 04:52:59'),
+(3, 'EU', 'Europe', '2021-12-02 04:53:07', '2021-12-02 04:53:07'),
+(4, 'NA', 'North America', '2021-12-02 04:53:15', '2021-12-02 04:53:15'),
+(5, 'OC', 'Oceania', '2021-12-02 04:53:24', '2021-12-02 04:53:24'),
+(6, 'AS', 'Asia', '2021-12-02 04:53:48', '2021-12-02 04:53:48'),
+(7, 'SA', 'South America', '2021-12-02 04:53:53', '2021-12-02 04:53:53');
 
 -- --------------------------------------------------------
 
@@ -67,36 +67,18 @@ CREATE TABLE `countries` (
 --
 
 INSERT INTO `countries` (`id`, `con_code`, `coun_code`, `coun_name`, `created_at`, `updated_at`) VALUES
-(1, 'AF', 'DZ', 'Algeria', NULL, NULL),
-(2, 'AF', 'EG', 'Egypt', NULL, NULL),
-(3, 'AF', 'GH', 'Ghana', NULL, NULL),
-(4, 'AF', 'ZA', 'South Africa', NULL, NULL),
-(5, 'AF', 'ZW', 'Zimbabwe', NULL, NULL),
-(6, 'AS', 'BD', 'Bangladesh', NULL, NULL),
-(7, 'AS', 'CN', 'China', NULL, NULL),
-(8, 'AS', 'IN', 'India', NULL, NULL),
-(9, 'AS', 'LB', 'Lebanon', NULL, NULL),
-(10, 'AS', 'AE', 'United Arab Emirates', NULL, NULL),
-(11, 'EU', 'FR', 'France', NULL, NULL),
-(12, 'EU', 'DE', 'Germany', NULL, NULL),
-(13, 'EU', 'IT', 'Italy', NULL, NULL),
-(14, 'EU', 'ES', 'Spain', NULL, NULL),
-(15, 'EU', 'GB', 'United Kingdom', NULL, NULL),
-(16, 'NA', 'BS', 'Bahamas', NULL, NULL),
-(17, 'NA', 'BB', 'Barbados', NULL, NULL),
-(18, 'NA', 'CR', 'Costa Rica', NULL, NULL),
-(19, 'NA', 'CU', 'Cuba', NULL, NULL),
-(20, 'NA', 'DM', 'Dominica', NULL, NULL),
-(21, 'OC', 'AU', 'Australia', NULL, NULL),
-(22, 'OC', 'FJ', 'Fiji', NULL, NULL),
-(23, 'OC', 'NZ', 'New Zealand', NULL, NULL),
-(24, 'OC', 'PG', 'Papua New Guinea', NULL, NULL),
-(25, 'OC', 'WS', 'Samoa', NULL, NULL),
-(26, 'SA', 'AR', 'Argentina', NULL, NULL),
-(27, 'SA', 'BR', 'Brazil', NULL, NULL),
-(28, 'SA', 'CO', 'Colombia', NULL, NULL),
-(29, 'SA', 'EC', 'Ecudaor', NULL, NULL),
-(30, 'SA', 'VE', 'Venezuela', NULL, NULL);
+(1, 'OC', 'AU', 'Australia', '2021-12-02 04:54:16', '2021-12-02 04:54:16'),
+(2, 'AS', 'BD', 'Bangladesh', '2021-12-02 04:54:23', '2021-12-02 04:54:23'),
+(3, 'SA', 'BR', 'Brazil', '2021-12-02 04:54:31', '2021-12-02 04:54:31'),
+(4, 'EU', 'FR', 'France', '2021-12-02 04:54:39', '2021-12-02 04:54:39'),
+(5, 'EU', 'DE', 'Germany', '2021-12-02 04:54:47', '2021-12-02 04:54:47'),
+(6, 'AS', 'IN', 'India', '2021-12-02 04:54:55', '2021-12-02 04:54:55'),
+(7, 'OC', 'NZ', 'New Zealand', '2021-12-02 04:55:02', '2021-12-02 04:55:02'),
+(8, 'AF', 'ZA', 'South Africa', '2021-12-02 04:55:11', '2021-12-02 04:55:11'),
+(9, 'EU', 'ES', 'Spain', '2021-12-02 04:55:21', '2021-12-02 04:55:21'),
+(10, 'EU', 'GB', 'United Kingdom', '2021-12-02 04:55:33', '2021-12-02 04:55:33'),
+(11, 'NA', 'US', 'United States Of America', '2021-12-02 04:55:43', '2021-12-02 04:55:43'),
+(12, 'SA', 'AR', 'Argentina', '2021-12-02 04:55:51', '2021-12-02 04:55:51');
 
 -- --------------------------------------------------------
 
@@ -135,9 +117,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(8, '2021_11_21_085833_create_tasks_table', 2),
-(9, '2021_11_21_090003_create_countries_table', 2),
-(10, '2021_11_21_090030_create_continents_table', 2);
+(17, '2021_11_21_085833_create_tasks_table', 2),
+(18, '2021_11_21_090003_create_countries_table', 2),
+(19, '2021_11_21_090030_create_continents_table', 2);
 
 -- --------------------------------------------------------
 
@@ -179,15 +161,27 @@ CREATE TABLE `tasks` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `continent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `assigned_by` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `assigned_by_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `assigned_to` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `assigned_to_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `assign_date` datetime NOT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tasks`
+--
+
+INSERT INTO `tasks` (`id`, `title`, `description`, `assigned_by`, `assigned_by_country`, `assigned_to`, `assigned_to_country`, `assign_date`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Alien Invasion', 'Save world from alien invasion', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-01 16:56:00', 'Queue', '2021-12-02 04:56:28', '2021-12-02 04:56:28'),
+(2, 'Help alien invasion', 'Help me save world from alien invasion Thor', 'scottishsummer', 'Bangladesh', 'thor299', 'Australia', '2021-12-01 16:01:00', 'Assigned', '2021-12-02 04:58:03', '2021-12-02 04:58:03'),
+(3, 'Save MILIL', 'Save MILIL from distruction', 'ghanimiah', 'Bangladesh', 'ghanimiah', 'Bangladesh', '2021-11-17 09:13:00', 'Doing', '2021-12-02 05:09:38', '2021-12-02 05:09:38'),
+(4, 'Help me save MILIL', 'Help me save Milil Sami', 'ghanimiah', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-11-28 20:12:00', 'Assigned', '2021-12-02 05:10:14', '2021-12-02 05:10:14'),
+(5, 'MCU Film', 'Hey, I am producing a new MCU Film. Do this movie for me.', 'ghanimiah', 'Bangladesh', 'wolvering123', 'Australia', '2021-10-20 07:14:00', 'Assigned', '2021-12-02 05:13:18', '2021-12-02 05:13:18'),
+(6, 'POP Film', 'I am making a new Prince of Persia movie. Be my actress here.', 'ghanimiah', 'Bangladesh', 'pollytamina', 'United Kingdom', '2021-09-29 06:14:00', 'Assigned', '2021-12-02 05:14:11', '2021-12-02 05:14:11');
 
 -- --------------------------------------------------------
 
@@ -214,71 +208,28 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `country`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'qNanp9m4Rvdj4Ov', 'MMwhsStpSYpKu1t', 'AZsho2MmGk', 'Algeria', '0yNRNggSna@gmail.com', NULL, '$2y$10$6yf0bI/2ZRp/kPbaTZX5eOyFW7QPlrPFQcoFNV3RnRyAoeXCNRNJi', NULL, NULL, NULL),
-(2, 'LKYbQeMG5lMBHnM', 'MdBeBH3odpNSYKA', 'SNk3TGfsr4', 'Algeria', 'ivFmWd60n2@gmail.com', NULL, '$2y$10$3YAQSIxbZw8ykgpdSO0VM.0o7SRGFhxLQ.A6OKvb1qr.qY56STiii', NULL, NULL, NULL),
-(3, 'vEh4uyUdMnWXmsU', '5Qg2OMGl0rkz8nB', 'Bo5Kk1ghss', 'Egypt', 'kkHNNEWJZu@gmail.com', NULL, '$2y$10$lt0oS9gDxaflhl9rGmYz/ewH17REWykOTC7JrzzcQG0qUzJI.vJ8W', NULL, NULL, NULL),
-(4, '35WzrL4fJ20CF0m', 'rjglU7ySNvDjs39', 'QvS7dhSfoZ', 'Egypt', 'hfzlUA2eKw@gmail.com', NULL, '$2y$10$69mTEHhGMmn18Z2ImdahTObCcMjzrssBPpPM6AngW3JfdR2OSzYVq', NULL, NULL, NULL),
-(5, 'WhW4F3Tjvmjv4l1', 'dbLSqx3DDgwvIGp', 'MZTPco2NOc', 'Ghana', 'TlxfmZx8dv@gmail.com', NULL, '$2y$10$pGa2R0U24R3u8wKsognpre7BgYXDcW.HovSiLIAzmX9JoSElugxci', NULL, NULL, NULL),
-(6, 'z7lP0PBA0q9c87S', 'lpGjS8GkOccCjbQ', 'mWDEgvSF0V', 'Ghana', 'aO2PGjSV50@gmail.com', NULL, '$2y$10$Ee1apKN0Ou4.icU1y4fL4.04cx734KTx0nrC5JAD3V6kUyQ.8XRLa', NULL, NULL, NULL),
-(7, 'Nelson', 'Mendela', 'nelsonM', 'South Africa', 'fsm4ZubE3f@gmail.com', NULL, '$2y$10$tw9hurI/R96oSJohyD2.dOxXhwrPAwUvA0QZFps/yfXu8g4djK50W', NULL, NULL, NULL),
-(8, 'Abraham', 'De Villiars', 'ABD360', 'South Africa', 'OwxDfWg0G7@gmail.com', NULL, '$2y$10$MHGuuEcCInCz9iq7dhDRE.w3H2euIyMbxYod9WdhaK.4rGBaCOyP.', NULL, NULL, NULL),
-(9, 'wmIiZb7AtiXK2vA', 'ieVX3o3OxlEAiUa', 'aqe4BHlnAc', 'Zimbabwe', 'PisWEqMJ4e@gmail.com', NULL, '$2y$10$XI7iewMLTOtUM1iql40i0.XaIR1dQmi...3hq7RtI9vR9Hs4FGIeG', NULL, NULL, NULL),
-(10, 'dGUL8ArXkrvXHwg', 'wkY49KcqKYFcuvz', '5dktocGoSh', 'Zimbabwe', 'pydzhbt2tP@gmail.com', NULL, '$2y$10$xugh7sGmn7oyl0WV7lV/iOKCmmQaPKuz5u4M6bDUV.Hd6CQEjo.Ge', NULL, NULL, NULL),
-(11, 'Ananta', 'Jalil', 'AJSuperstar', 'Bangladesh', 'nq1Fbqduuv@gmail.com', NULL, '$2y$10$JKccmlmW8BpsOvQIqvNx1.iBiR.QyBbbhU/fkJjIv.JM9QyXvDasC', NULL, NULL, NULL),
 (12, 'Shakib', 'Al Hasan', 'Shakib75', 'Bangladesh', 'sulh1h9C6f@gmail.com', NULL, '$2y$10$FAca69nDi9B385kJcplArekIz1M8WU.w1S7yQ0JAqcIaHXgZL02RO', NULL, NULL, NULL),
-(13, 'Pori', 'Moni', 'danakatapori', 'Bangladesh', 'q1yP5BUG4X@gmail.com', NULL, '$2y$10$6n5WUo3yrUAlxWA34/h.MeDt31aCWY1vPdO.f5lq4XHir8codZlie', NULL, NULL, NULL),
-(14, 'WSpgfElmz3blSzF', 'a4mSffuep7cmNLm', 'WIt6WZHWET', 'China', 'sI6Gnn3XWz@gmail.com', NULL, '$2y$10$3GeiAFfaioi9nrgcBuJbw.2LH433/z2dg8NYiWOLKwfBl7W3KGcse', NULL, NULL, NULL),
-(15, 'XKkDzpVf22fE0l0', 'Kg3VLe8T7YVHwOC', '0hwyEJVSkD', 'China', 'D9ylPR8MHe@gmail.com', NULL, '$2y$10$OGAllo.IwzhAzQd89DUce.xQTGwdEaDmPXnaOTu/S46LQxcujTU9.', NULL, NULL, NULL),
 (16, 'Mahendra', 'Singh Dhoni', 'MSDcaptaincool', 'India', 'vhVd91hJa1@gmail.com', NULL, '$2y$10$FlF6kkxItlXurWOZ.4ZqAeLBT7qLQmBJ2VBoRwOQiV0t9VncmBmyW', NULL, NULL, NULL),
 (17, 'Katrina', 'Kaif', 'kkaif123', 'India', 'GB0mMmqmvl@gmail.com', NULL, '$2y$10$1pyn/nmTXSuGvCFvIhYbGO2vbA9Relb.g3uUuW7l16rzpFw1B1lfy', NULL, NULL, NULL),
-(18, 'Mia', 'Khalifa', 'merealMK00', 'Lebanon', 'ZqnT3vQ67R@gmail.com', NULL, '$2y$10$wYpr1ljxM5kLfqy6155GVuE.c1OZvvqnyWARR4.2aVzdT3QkhbeoC', NULL, NULL, NULL),
-(19, '6tKods5aCkcOfq8', 'KS8ln3Gh9asiKVR', 'L1vhmUKsQc', 'Lebanon', 'V7dppgrZqV@gmail.com', NULL, '$2y$10$6U5PzppgNrIbMhqP/ODCo.GaWtGo3uWFpN2ai7GnI/p2X5WgAFpHC', NULL, NULL, NULL),
-(20, 'MdESqqv551J7e2r', 'qMbbri3FRbYUHD0', 'IAxDiYRtHU', 'United Arab Emirates', '9ZyxsVqUHj@gmail.com', NULL, '$2y$10$S6c8.froqpYscuNtlEIlaOxdBXKPi4U5P5N6V94g84U3PoPegQ32a', NULL, NULL, NULL),
-(21, 'ChLwTm7cxsZcjeY', 'yCoNU9Vziw6Y75q', 'u3uhKuACx0', 'United Arab Emirates', 'lPIxsrUVyg@gmail.com', NULL, '$2y$10$NXQJDvv7Eu0Fpx56p1SpfeiutX1yIJh925u14P.9nPCEEZ.YFXN5S', NULL, NULL, NULL),
 (22, 'Karim', 'Benzema', 'bigboykb', 'France', 'HfwPkN1hUg@gmail.com', NULL, '$2y$10$Z2TU7nOzUFquliySIi9mgOLGmjWlU.sRh6i8CaOmbVgP5IWEr51R.', NULL, NULL, NULL),
 (23, 'Melanie', 'Laurent', 'shoshanna83', 'France', 'KwyQLiQguu@gmail.com', NULL, '$2y$10$JdKqFGsSnInGuEYor5d0jOWFwEDvwpchk1WAKw7N3pXp2NLfjFdIO', NULL, NULL, NULL),
 (24, 'Mesut', 'Ozil', 'playmaker10', 'Germany', 'IEvRmAqW2E@gmail.com', NULL, '$2y$10$2JYXLK1IQh9vQnmLU4a1WOPnM.KEbQ9PF5hX2Bmsn5.udLv6rPV.G', NULL, NULL, NULL),
 (25, 'Toni', 'Kroos', 'germansniper08', 'Germany', 'LMxRpOqK1G@gmail.com', NULL, '$2y$10$TOIm43EE.qQ7j0bpBS7f7.Ep602ZffYOqYjiOsQxTP3KNnoB054w6', NULL, NULL, NULL),
-(26, 'ZI20yn1KONBkbuy', '0mLSrvO35rmKnWo', 'fz4uSGZEis', 'Italy', 'Z8P974Paqn@gmail.com', NULL, '$2y$10$aoUD/PXfHWebPQ5PDoKp2.2BDk/xiheDyhO5zEpn/.O3t7SZ9EyAW', NULL, NULL, NULL),
-(27, 'GQjgC4Wu2TKBfPP', '5drAaO1Q4nogCeV', '0y36mDsABZ', 'Italy', '5ak0x2aRex@gmail.com', NULL, '$2y$10$7Poo5enaYqylTDEgblF/Iu1J7UUiG2/8MAgbpzYQs0ylkDPayHf/S', NULL, NULL, NULL),
-(28, 'f1dCOKQqnaSyztR', 'Vl45qUz4sR5ZQAL', '8ItnDElQ8F', 'Spain', '7MeJFE2CwU@gmail.com', NULL, '$2y$10$mtpvqO0F98LFzZdWjwFcL.cvtYAVOIoBdieYk8.br8c88A2jrn1pe', NULL, NULL, NULL),
-(29, 'TTZOO07bghiGYOr', 'C9IsN2KHwQitwrL', 'K9dqc0Ncgb', 'Spain', 'Vk21wbEaIF@gmail.com', NULL, '$2y$10$ag0sE.rhovW4km99EbpAH.6.YJMF64YTMVEK45OsD2Z4o31X4jREa', NULL, NULL, NULL),
 (30, 'Gemma', 'Arterton', 'pollytamina', 'United Kingdom', 'xRMd0UcBtA@gmail.com', NULL, '$2y$10$8lgeIcUTAYVFMgYyPjX8/.bJgFuzrlvvGGh81dVg3/lVEMyeYuq26', NULL, NULL, NULL),
-(31, 'Sherlock', 'Holmes', 'acdholmes', 'United Kingdom', 'WTM5XxpsGx@gmail.com', NULL, '$2y$10$ijyONFBvIzu28vEzWjaUeew9Ri4FQ045AgwWy/us3X.6bZGVe5n1e', NULL, NULL, NULL),
-(32, 'UBhLkBsSzydgWvz', 'yuVcG3sy6JMefiw', 'k3bM3cqtUQ', 'Bahamas', 'CiS4vfHkvK@gmail.com', NULL, '$2y$10$75d5LateuzQSeecI.TTtneFMueKb3mBVfpqSJPvKcIeqlXOi7hKqe', NULL, NULL, NULL),
-(33, 'Z23cGRYj4fcf1f8', 'bY5DacnY3eJODey', '3xFNPzmQei', 'Bahamas', 'EngiZnh4Bk@gmail.com', NULL, '$2y$10$HYc5m0oGuEjcUVizuGqXn.fbKqiDSPUIMVyeosJoU7u0mgGPcNrYi', NULL, NULL, NULL),
-(34, 'pXahhbrRJgweAJb', '3uyLidLh7WHuf8k', '2rYhinScR3', 'Barbados', '1bfEup51Kg@gmail.com', NULL, '$2y$10$/g35R8niJdwVLC.qxdetJ.zclQ0V03SDUZuUe1.i9udml9f48oxo6', NULL, NULL, NULL),
-(35, 'xlMuYrk089wPqyy', '6LKNOMORrAg1S65', 'kIurOnEji7', 'Barbados', 'Ifarm0OtWb@gmail.com', NULL, '$2y$10$wVnD4UU0/KWXN1OHDZFSlefQ0mGSBqMHkTptbM6nwMrGNdtuNNnUS', NULL, NULL, NULL),
-(36, 'Eszbrmp3ndeadwF', 'QrKZd9qxvR7lWE2', 'd2Cd080LO2', 'Costa Rica', 'm22BtibFH1@gmail.com', NULL, '$2y$10$Osgxheksmdn1fgXGkN5P/eRVwS5tCOAnuAlIgbg4b.mOFpXKM1c1m', NULL, NULL, NULL),
-(37, '8hRsU5nVQ2HBRX5', 'pPzAMoQ4gk6Wj2A', 'VKf0rec0hU', 'Costa Rica', 'rwVGonwZ03@gmail.com', NULL, '$2y$10$qAQjFCw2LWsLCm5DZkIIK.sURnCMm4Ga24UzMtuSqNLAdUVHnMvIi', NULL, NULL, NULL),
-(38, 'nuKDeTAyWnEhtQ3', 'xzbMihNwhDEucmo', 'CQ7RbH37Jh', 'Cuba', 'rbVB1Tfou7@gmail.com', NULL, '$2y$10$dsqyIvv4eOJ2qQ3bFNAZc.w32k33NUDgwK7U7KEEhGWHF5qC7j8P6', NULL, NULL, NULL),
-(39, 'acqpibAHQp4mety', 'xROx46v63W94blI', 'sFB0ggesy3', 'Cuba', 'JprvCurOWn@gmail.com', NULL, '$2y$10$3N53UnH0WCX3hbKdED2y9eFRqu/eJUpyLbRAlFtJHBUSNIHtxlDW2', NULL, NULL, NULL),
-(40, 'HFKZ9WdKI6fDpIE', 'pqznDITaVfpfsrE', 'rnud6ktq38', 'Dominica', 'rjMcIuUTbJ@gmail.com', NULL, '$2y$10$dv0TJrZu1F5pCyKILyo5Bu20GA1QaenoVmPPAWnqn6ctD2piLl9YO', NULL, NULL, NULL),
-(41, 'r5IEhUhKsXwXfU8', 'vqxpNa9U8wsyCCh', '3e6ULNP2uV', 'Dominica', '53GwcmlIhq@gmail.com', NULL, '$2y$10$t5Zk/33YOejgrqfaB8Ht/.ZBZUNzd/vBoYEo49bY1wKmrXff87sua', NULL, NULL, NULL),
-(42, 'gvzmjfHKeuEd1u4', 'c8a2CgOlZOmXjVL', 'cqng7nUdcF', 'Australia', 'ekVrpLRMfT@gmail.com', NULL, '$2y$10$X85GCVRbEbXuqOXaYTrzKOMm35sEBxkj45SXMeSIAsL3aWBi42EM.', NULL, NULL, NULL),
-(43, '8uXL0eMNsZ2SzTw', '3BGPV7Td5kSXywE', 'bB9pz0GULw', 'Australia', 'YJsyB6KAgF@gmail.com', NULL, '$2y$10$j8JjXXcWbgZeCwNXkzJkuOeyf8Tlc7LGTmTBy0xbJzha5fgpXx4GK', NULL, NULL, NULL),
-(44, 'PllBMQkBVkeiiIs', 'SZA5CTIwVjWsolT', '2gRXck9HP8', 'Fiji', 'KBpxBQKjZ0@gmail.com', NULL, '$2y$10$H551icCUQjsn/sq7fHe4weQMoHOMIJTsSbFKLvoXzr2rZjXpwprFa', NULL, NULL, NULL),
-(45, 'r1Ndm1rOzbMnxBN', 'm6hfVcEzJ6ea6h2', 'vKYlGx84SF', 'Fiji', 'YJtfeWgwLn@gmail.com', NULL, '$2y$10$ETkalnTOIl2BOM0GEg9t.eBc.hXfHB468R5G/apdrh6zlbi.XiFm.', NULL, NULL, NULL),
-(46, 'x2Uu0gfxX8F4hfT', 'mrxciD86rgZHzEH', 'GSrQ6QYzW7', 'New Zealand', 'sxuFSTs86a@gmail.com', NULL, '$2y$10$cf8ZiSFezkOmJNEDdYucyOX2d.zDoI7xnNRkkcu87PV3goWuOMFe.', NULL, NULL, NULL),
-(47, 'oSfzPAZaTlR92aO', 'upFdeTGY1pHHchE', 'UUStfnkopG', 'New Zealand', '27XjwZs00d@gmail.com', NULL, '$2y$10$Z1GhKpYS4oSeupqxcopgC.BgHCBRSpTAAAr2IzlTjHUvpCA598UlG', NULL, NULL, NULL),
-(48, 'RXjnuftlIIjO7TF', 'Ma6AeJWBlDRPpnb', 'DBbk9PCxPh', 'Papua New Guinea', 'b9RGDMCoJE@gmail.com', NULL, '$2y$10$EqAvNtqD130M.CG.cXQcN.30HNZJTIJ6MQDZ/cPB.cHbNInfhVJdy', NULL, NULL, NULL),
-(49, 'Q3hiUJ77mT3AjUi', 'fSR2ed0iMudABfk', 'bGzeiFgI4G', 'Papua New Guinea', 'vVdfRXLPor@gmail.com', NULL, '$2y$10$QPp7qmkfigJZJk5Z.SOE5e5/u/e7W5oMwMqzf0ZGFYhboU5XFRRL2', NULL, NULL, NULL),
-(50, 'H1AsBAHgGx3bnsZ', '40CWitDURHw64gd', 'QmZkWKD3CN', 'Samoa', 'G2DPIAk0hM@gmail.com', NULL, '$2y$10$YdV2nGlw4zrsLtaYTOKEZuzOkbVtJuRuePceP0GsA93u5Ux2aIqmK', NULL, NULL, NULL),
-(51, 'MFPDkSfomp0GgLw', 'TayK6M0vJXfuyUr', '3yVS1mEEKh', 'Samoa', 'GM1FujC3JT@gmail.com', NULL, '$2y$10$TLi94GsHcdkjBAkzhASipOKkDGVkq82X4tOaNmkZFQZfX0nAf/AqO', NULL, NULL, NULL),
-(52, 'IC7WmQnfk0NEibn', 'IC4aDvRsuO8SeDF', 'hp33fl9kXq', 'Argentina', 'Y6IbWOMYQV@gmail.com', NULL, '$2y$10$FJTH84IFTd/SrVC2Vy3Vc.AIPyUcVJ1FTPoHOJFXEYkKernLRVdD2', NULL, NULL, NULL),
-(53, 'TNt2IEeLhgxNCpe', 'W57oaAymYVT1oVN', 'gObUT3xNjU', 'Argentina', 'i3NrDT2EG7@gmail.com', NULL, '$2y$10$C0mA/KYyiQN9q1vrC.zLnufUHIm99Zq3QS0Z7e09JRJ4Z836sA.zu', NULL, NULL, NULL),
-(54, 'aONycdQgG5aEKe3', 'P6Xa05W05CuqJpT', 'nwm6QtM0XC', 'Brazil', 'ofJXQMtpKr@gmail.com', NULL, '$2y$10$4hK2VLK6Nw6Q.ZEJDOc8te30/1QRSXlW1A1qY5K4UZuA8LVHk2oWq', NULL, NULL, NULL),
-(55, 'dtuaUNGU3n9doVp', 'pRPFyFWisUjSurl', '2kmpMtYWHu', 'Brazil', '2Qa8VaYl3Q@gmail.com', NULL, '$2y$10$elNezDgosLv8MJndMDYyauAAMeO5Oh3dnB52ahHgNEmWZRTTkBT/m', NULL, NULL, NULL),
-(56, 'tJ027P7DOHObJHH', 'hlscLRAHaQrBHhd', 'WBQbq4oKl6', 'Colombia', '1uYXoaNsjh@gmail.com', NULL, '$2y$10$8IZriPxzyma4o7KYGjL89uxAXYs1rXeJBS00Z5ZeuZH6OpdNgVjl.', NULL, NULL, NULL),
-(57, 'RKEBgcuAG5Ap3nA', 'EnOf2ZCIdslnTDc', 'pqi3pKxN0j', 'Colombia', 'euYgfgeVai@gmail.com', NULL, '$2y$10$nblU6b2ZPSHfvKVE/onEGOhnDKtEeVGFWzxQj68/TupOYQ72UoB.2', NULL, NULL, NULL),
-(58, 'DN8nvjJphk2oAjw', 'BGFSesWeOxrlSR9', 'oz1LM5vKv2', 'Ecudaor', 'puYGqcihYl@gmail.com', NULL, '$2y$10$Au.0RYNaiwIy1dwzi1o3AODvzJttYChV3Z5GZzxXDOMuycKtnyJCG', NULL, NULL, NULL),
-(59, 'IxJt5LNGW0cKXM9', 'DRiciRANd1CXL2z', 'PNVdPwD5mi', 'Ecudaor', 'yUWwHSN4ia@gmail.com', NULL, '$2y$10$Mc8ozdJCN4q6m7A3XQAG3us8VZhcDDMAMTymfUB12Ae.dEUYb1ZUG', NULL, NULL, NULL),
-(60, 'uXLVR5wy6rORCog', 'mvHvSbGqL6uKUHW', 'nBSM0u3QDG', 'Venezuela', 'gDd6mtUNKt@gmail.com', NULL, '$2y$10$GNYLWm1Jcf/8xmGFJdGM4.PKGHoR3KE37p6GqDD4TWZSupVaKQky6', NULL, NULL, NULL),
-(61, 'EoF0mCKJxpdWdcz', 'jWk0XNP1QZMjE8W', 'V5IBZmoWSj', 'Venezuela', 'khXwofZXQh@gmail.com', NULL, '$2y$10$qC72fImgjPMH9ywBlzBa5ObzGenBEU0rwyMf/HmcUvB1vWIy2e8.G', NULL, NULL, NULL),
 (62, 'Samiur', 'Rahman', 'scottishsummer', 'Bangladesh', 'summer@gmail.com', NULL, '$2y$10$P9MAdtyAi3spj8IA1G4HEuIzARsGPj1Zmomjt3sarqUkdTyiMM.Em', NULL, '2021-11-21 04:41:09', '2021-11-21 04:41:09'),
 (63, 'Alastair', 'Cook', 'acook2684', 'United Kingdom', 'batbatcook@gmail.com', NULL, '$2y$10$QGSmMtNgWfT0a76DrcLI0OLt11NFOLMNkjUvmulJ48S4FlHZxrZoO', NULL, '2021-11-22 04:20:22', '2021-11-22 04:20:22'),
-(64, 'Jaya', 'Ahsan', 'missjaya', 'Bangladesh', 'jaya83@gmail.com', NULL, '$2y$10$kiSEcxr98B9kP.6Ci8wkGOOLLAglHQHCT36jH6l801jBFf4mmrQWK', NULL, '2021-11-23 04:38:12', '2021-11-23 04:38:12'),
-(65, 'Sharif', 'Alam', 'priom07', 'United Kingdom', 'priom007@gmail.com', NULL, '$2y$10$JwxgTEn69Qt730.lEJxCb.8i0eaaAkO1qqZiU5waW5HaQBPpSLYui', NULL, '2021-11-23 05:17:47', '2021-11-23 05:17:47');
+(69, 'Nelson', 'Mendela', 'nelsonM', 'South Africa', 'nelson123@gmail.com', NULL, '$2y$10$ebyfsYgTEEWNMug6cg3pQ.li7.Gm4RCi6qHECB.0VCs9HVrlakiIW', NULL, '2021-11-28 22:45:15', '2021-11-29 00:11:21'),
+(71, 'Lionel', 'Messi', 'leo10', 'Argentina', 'leo10@gmail.com', NULL, '$2y$10$t8gkOD/nfGNslh1jAtEsDurPay/ctNaK.CUB7O7FxK/2qhZNYvPn2', NULL, '2021-11-28 22:50:15', '2021-11-29 03:38:37'),
+(77, 'Sergio', 'Agüero', 'kunagüero', 'Argentina', 'kumkun10@gmail.com', NULL, '$2y$10$GyurICXCF8mQGdSlD9tRYO.Ug0Lwxy7OdyaE1qZ13bXTeyDEoQ/cG', NULL, '2021-11-29 03:41:40', '2021-11-29 03:41:40'),
+(78, 'Hugh', 'Jackman', 'wolvering123', 'Australia', 'xmen@gmail.com', NULL, '$2y$10$OI9c4x4bTmugzqiidx1wHeAWUDFhdnWW7z.8f4yA.NP6d.3MJnwme', NULL, '2021-11-29 03:42:48', '2021-11-29 03:42:48'),
+(79, 'Brett', 'Lee', 'speedstarlee', 'Australia', 'aclee@gmail.com', NULL, '$2y$10$A2FfbtmOws9VoMNpxbdwIeWpFcN22Vt7A59acaaOoZc7Fq35GesBG', NULL, '2021-11-29 03:43:49', '2021-11-29 03:43:49'),
+(81, 'Meagan', 'Good', 'mgood123', 'United Kingdom', 'meagan@gmail.com', NULL, '$2y$10$MBoEap6jAMiInzZaX03eguMMx1KK8nLkNX2n81Z86UaH9OoOXa5lq', NULL, '2021-11-29 03:49:17', '2021-11-29 03:49:17'),
+(82, 'Ananta', 'Jalil', 'ajstar', 'Bangladesh', 'ajstar@gmail.com', NULL, '$2y$10$ok2E2pQVX.Xr7ps9hvkJIeiZ8fjIEntRTRQ6gGA4I18ALra0DJ882', NULL, '2021-11-29 03:51:23', '2021-11-29 03:51:23'),
+(83, 'Jaya', 'Ahsan', 'jaya123', 'Bangladesh', 'jaya83@gmail.com', NULL, '$2y$10$sk8EGE1Bf1XOzTTGxGMS2uJKPM5pQo3By1FwTUnwTLPb6AmT1jHfC', NULL, '2021-11-29 03:51:45', '2021-11-29 03:51:45'),
+(84, 'Chris', 'Hemsworth', 'thor299', 'Australia', 'iamthor@gmail.com', NULL, '$2y$10$T4CAmh3KTZdjTQzGXr/frOLGZKCHaO7BqpzRHBNz2WTUWoo6kEj/2', NULL, '2021-11-29 03:52:43', '2021-12-02 04:57:09'),
+(85, 'Francisco', 'Isco', 'isco22', 'Spain', 'isco22@gmail.com', NULL, '$2y$10$P6qbfwMN3.dISsYjDNCkV.10VrFW0H1XRuVulpLKE5YPwiqL9Yn32', NULL, '2021-11-29 03:53:47', '2021-11-29 03:53:47'),
+(86, 'Russel', 'Crowe', 'rcrowe', 'New Zealand', 'crowe@gmail.com', NULL, '$2y$10$e/unU9FoSP3MFq9f27zlSOUX44.up8C.cKolV51gj7Sba60jdhaUG', NULL, '2021-11-29 03:55:14', '2021-11-29 03:55:14'),
+(87, 'Rezwanul', 'Ghani', 'ghanimiah', 'Bangladesh', 'ghanimiah@gmail.com', NULL, '$2y$10$cpkY44bwLyBBHa2UUwMlW.E.x8HSF8GFZLHk2AjbWmfEgRC4iQMpy', NULL, '2021-12-02 05:08:10', '2021-12-02 05:08:10');
 
 --
 -- Indexes for dumped tables
@@ -344,13 +295,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `continents`
 --
 ALTER TABLE `continents`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -362,7 +313,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -374,13 +325,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -34,38 +34,44 @@
     </div>
 
     <div class="card-body">
-        <table class="table table-dark table-striped" style="text-align: center;">
-            <thead>
-                <tr>
-                <th scope="col">SL</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Country</th>
-                <th scope="col">Email</th>
-                <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @php 
-                    $i = $users->perPage() * ($users->currentPage() - 1);
-                @endphp
-                @foreach ($users as $user)
+        @if ($users->count() > 0 )
+            <table class="table table-dark table-striped" style="text-align: center;">
+                <thead>
                     <tr>
-                        <th scope="row">{{  $loop->index +1 + $i }}</th>
-                        <td>{{  $user->first_name }}</td>
-                        <td>{{  $user->last_name }}</td>
-                        <td>{{  $user->user_name }}</td>
-                        <td>{{  $user->country }}</td>
-                        <td>{{  $user->email }}</td>
-                        <td>
-                            <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="{{ route('users.edit', $user->id) }}">Edit</a>
-                            <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal{{$user->id}}">Delete</a>
-                        </td>
+                    <th scope="col">SL</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @php 
+                        $i = $users->perPage() * ($users->currentPage() - 1);
+                    @endphp
+                    @foreach ($users as $user)
+                        <tr>
+                            <th scope="row">{{  $loop->index +1 + $i }}</th>
+                            <td>{{  $user->first_name }}</td>
+                            <td>{{  $user->last_name }}</td>
+                            <td>{{  $user->user_name }}</td>
+                            <td>{{  $user->country }}</td>
+                            <td>{{  $user->email }}</td>
+                            <td>
+                                <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="{{ route('users.edit', $user->id) }}">Edit</a>
+                                <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal{{$user->id}}">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <div class="alert alert-danger">
+                <strong>Sorry !</strong> No such User Found.
+            </div>
+         @endif
     </div>
     <div class="card-footer">
         {{ $users->links() }}

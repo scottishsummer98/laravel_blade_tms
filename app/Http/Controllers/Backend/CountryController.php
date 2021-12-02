@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CountryStoreRequest;
+use App\Models\Continent;
 use App\Models\Country;
 use Illuminate\Http\Request;
 
@@ -11,11 +12,11 @@ class CountryController extends Controller
 {
     public function index(Request $request)
     {
-        $countries = Country::orderBy('created_at')->paginate(20);
+        $countries = Country::orderBy('coun_name')->paginate(20);
 
         if($request->has('search')){
-            $countries = Country::where('con_code','like', "%{$request->search}%")
-                    ->orWhere('coun_name','like', "%{$request->search}%")
+            $countries = Country::where('con_code','LIKE', "{$request->search}")
+                    ->orWhere('coun_name','LIKE', "{$request->search}")
                     ->paginate(50);
         }
         
@@ -24,7 +25,8 @@ class CountryController extends Controller
 
     public function create()
     {
-        return view('countries.create');
+        $continentlist = Continent::orderBy('con_name')->get();
+        return view('countries.create')->with('continentlist', $continentlist);
     }
 
     
@@ -42,7 +44,8 @@ class CountryController extends Controller
 
     public function edit(Country $country)
     {
-        return view('countries.edit', compact('country'));
+        $continentlist = Continent::orderBy('con_name')->get();
+        return view('countries.edit', compact('country','continentlist'));
     }
 
 

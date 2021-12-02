@@ -58,19 +58,10 @@
 
                             <div class="col-md-6">
                                 <select id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
-                                    <option selected disabled>Pick Your Country</option>
-                                    <option value="Argentina">Argentina</option>
-                                    <option value="Australia">Australia</option>
-                                    <option value="Bangladesh">Bangladesh</option>
-                                    <option value="Brazil">Brazil</option>
-                                    <option value="France">France</option>
-                                    <option value="Germany">Germany</option>
-                                    <option value="India">India</option>
-                                    <option value="New Zealand">New Zealand</option>
-                                    <option value="South Africa">South Africa</option>
-                                    <option value="Spain">Spain</option>
-                                    <option value="United Kingdom">United Kingdom</option>
-                                    <option value="United Kingdom">United States Of America</option> 
+                                    <option selected disabled>Select Your Country</option>
+                                    @foreach ($countrylist as $listitem)
+                                        <option value="{{ $listitem->coun_name }}">{{ $listitem->coun_name }}</option>
+                                    @endforeach
                                 </select>
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">

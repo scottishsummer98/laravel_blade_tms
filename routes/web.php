@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Backend\ContinentController;
 use App\Http\Controllers\Backend\CountryController;
+use App\Http\Controllers\Backend\TaskController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\DataProviderController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +30,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('users', UserController::class);
 Route::resource('continents', ContinentController::class);
 Route::resource('countries', CountryController::class);
+Route::get('/tasks-index', [TaskController::class, 'index'])->name('tasks.index');
+Route::post('/tasks-index/storeOwnTask', [TaskController::class, 'storeOwnTask'])->name('tasks.index.storeOwnTask');
+Route::post('/tasks-index/storeOtherTask', [TaskController::class, 'storeOtherTask'])->name('tasks.index.storeOtherTask');
+Route::get('/tasks-overview', [TaskController::class, 'overview'])->name('tasks.overview');
+Route::get('/tasks-assign-own', [TaskController::class, 'ownCreate'])->name('tasks.ownCreate');
+Route::get('/tasks-assign-others', [TaskController::class, 'otherCreate'])->name('tasks.otherCreate');
