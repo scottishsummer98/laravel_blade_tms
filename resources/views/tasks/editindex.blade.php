@@ -4,11 +4,10 @@
 
 <div class="card">
     <div class="card-header">
-        Assign Task To Others
+        Edit Task 
     </div>
-    <form method="POST" action="{{ route('tasks.index.storeOtherTask') }}">
+    <form method="POST" action="{{ route('tasks.index.updateIndex', $task->id) }}">
     @csrf
-    
         <div class="card-body">
             <div class="row">
                 <div class="col-md-5 ml-5">
@@ -16,7 +15,7 @@
                         <label for="title" class="col-md-4 col-form-label">{{ __('Title') }}</label>
         
                         <div class="col-md-7">
-                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $task->title) }}" required autocomplete="title" autofocus>
         
                             @error('title')
                                 <span class="invalid-feedback" role="alert">
@@ -65,7 +64,7 @@
                         <label for="assign_date" class="col-md-4 col-form-label">{{ __('Assign Date') }}</label>
         
                         <div class="col-md-7">
-                            <input id="assign_date" type="datetime-local" class="form-control @error('assign_date') is-invalid @enderror" name="assign_date" value="{{ old('assign_date') }}" required autocomplete="assign_date" autofocus>
+                            <input id="assign_date" type="date" class="form-control @error('assign_date') is-invalid @enderror" name="assign_date" value="{{ old('assign_date', $task->assign_date) }}" required autocomplete="assign_date" autofocus>
         
                             @error('assign_date')
                                 <span class="invalid-feedback" role="alert">
@@ -99,7 +98,7 @@
                         <label for="description" class="col-md-2 col-form-label">{{ __('Description') }}</label>
         
                         <div class="col-md-10">
-                            <textarea rows="10" id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus></textarea>
+                            <textarea rows="10" id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description', $task->description) }}" required autocomplete="description" autofocus></textarea>
         
                             @error('description')
                                 <span class="invalid-feedback" role="alert">
@@ -117,14 +116,24 @@
                     <a class="btn btn-primary mr-2" href="{{ route('tasks.index') }}">Back</a>
                 </li>
                 <li class="nav-item">
-                    <button type="reset" class="btn btn-warning mr-2">Reset</button>
-                </li>
-                <li class="nav-item">
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Update</button>
                 </li>
             </ul>
         </div>
     </form>   
 </div>
+
+@endsection
+
+@section('footer')
+
+<script>
+    $(document).ready(function(){
+        $('#assigned_to_country').val('{{$task->assigned_to_country}}')
+        $('#assigned_to').val('{{$task->assigned_to}}')
+        $('#status').val('{{$task->status}}')
+        $('#description').val('{{$task->description}}')
+    })
+</script>
 
 @endsection

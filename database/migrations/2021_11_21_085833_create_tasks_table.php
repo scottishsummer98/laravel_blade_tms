@@ -21,7 +21,7 @@ class CreateTasksTable extends Migration
             $table->string('assigned_by_country');
             $table->string('assigned_to');
             $table->string('assigned_to_country');
-            $table->dateTime('assign_date');
+            $table->date('assign_date');
             $table->string('status');
             $table->timestamps();
         });

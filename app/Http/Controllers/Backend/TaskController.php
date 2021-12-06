@@ -12,14 +12,15 @@ class TaskController extends Controller
 {
     public function index(Request $request)
     {
-        
+       
         $tasks = Task::orderBy('created_at', 'DESC')
         ->where('assigned_by', '=', auth()->user()->user_name)
         ->orWhere('assigned_to', '=', auth()->user()->user_name)
         ->paginate(20);
 
-        if($request->has('search')){
-            $tasks = Task::where('status','like', "[{$request->status}]")
+        if($request->has('search1')){
+            $tasks = Task::where('status','like', "{$request->search1}")
+                    ->orWhere('title','like', "%{$request->search1}%")
                     ->paginate(50);
         }
 
@@ -31,8 +32,9 @@ class TaskController extends Controller
     {
         $tasks = Task::orderBy('created_at', 'DESC')->paginate(20);
 
-        if($request->has('search')){
-            $tasks = Task::where('status','like', "{$request->status}")
+        if($request->has('search2')){
+            $tasks = Task::where('status','like', "{$request->search2}")
+                    ->orWhere('title','like', "%{$request->search2}%")
                     ->paginate(50);
         }
 
@@ -42,14 +44,14 @@ class TaskController extends Controller
 
     public function ownCreate()
     {
-        return view('tasks.assigntaskown');
+        return view('tasks.createtaskown');
     }
 
     public function otherCreate()
     {
         $countrylist = Country::orderBy('coun_name')->get();
         $userlist = User::orderBy('first_name')->get();
-        return view('tasks.assigntaskother', compact('userlist','countrylist'));
+        return view('tasks.createtaskother', compact('userlist','countrylist'));
     }
 
 
@@ -85,26 +87,61 @@ class TaskController extends Controller
         return redirect()->route('tasks.index')->with('message', 'Task Assigned Successfully');
     }
 
-    public function show()
+
+    public function editIndex($id)
     {
-        
+        $countrylist = Country::orderBy('coun_name')->get();
+        $userlist = User::orderBy('first_name')->get();
+        $task = Task::find($id);
+        return view('tasks.editindex', compact('task','countrylist','userlist'));
     }
 
 
-    public function edit($id)
+    public function editIndexRestricted($id)
     {
-        //
+        $countrylist = Country::orderBy('coun_name')->get();
+        $userlist = User::orderBy('first_name')->get();
+        $task = Task::find($id);
+        return view('tasks.editindexrestricted', compact('task','countrylist','userlist'));
+    }
+
+    public function updateIndex(Request $request, $id)
+    {
+        $task = Task::find($id);
+        $task->update($request->all());
+        return redirect()->route('tasks.index')->with('message', 'Task Updated Successfully');
     }
 
 
-    public function update(Request $request, $id)
+    public function destroyIndex($id)
     {
-        //
+        $task = Task::find($id);
+        $task->delete();
+        return redirect()->route('tasks.index')->with('rmessage', 'Task Deleted Successfully');
     }
 
 
-    public function destroy($id)
+    public function editOverview($id)
     {
-        //
+        $countrylist = Country::orderBy('coun_name')->get();
+        $userlist = User::orderBy('first_name')->get();
+        $task = Task::find($id);
+        return view('tasks.editoverview', compact('task','countrylist','userlist'));
+    }
+
+
+    public function updateOverview(Request $request, $id)
+    {
+        $task = Task::find($id);
+        $task->update($request->all());
+        return redirect()->route('tasks.overview')->with('message', 'Task Updated Successfully');
+    }
+
+
+    public function destroyOverview($id)
+    {
+        $task = Task::find($id);
+        $task->delete();
+        return redirect()->route('tasks.overview')->with('rmessage', 'Task Deleted Successfully');
     }
 }

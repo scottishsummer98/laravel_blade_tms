@@ -23,7 +23,7 @@
                   </li>
                 </ul>
                 <form class="d-flex" action="{{ route('tasks.overview') }}" method="get">
-                  <input class="form-control mr-2" type="text" placeholder="Search here" name="search" id="inLineFormInput">
+                  <input class="form-control mr-2" type="text" placeholder="Search here" name="search2" id="inLineFormInput">
                   <button class="btn btn-primary" type="submit">Search</button>
                 </form>
             </div>
@@ -53,9 +53,9 @@
                 @endphp
                 @foreach ($tasks as $task)
                     <tr>
-                        <th style="width:100px" scope="row">{{  $loop->index +1 + $i }}</th>
-                        <td style="width:150px">{{  $task->title }}</td>
-                        <td style="width:250px">{{  $task->description }}</td>
+                        <th style="width:50px" scope="row">{{  $loop->index +1 + $i }}</th>
+                        <td style="width:120px">{{  $task->title }}</td>
+                        <td style="width:220px">{{  Str::substr($task->description, 0, 30) }} {{'. . . . . . .'}}  </td>
                         <td style="width:150px">
                             @if ($task->assigned_by == auth()->user()->user_name)
                                 {{ __('Myself') }}
@@ -63,7 +63,7 @@
                                 {{  $task->assigned_by }}
                             @endif
                         </td>
-                        <td style="width:150px">{{  $task->assigned_by_country }}</td>
+                        <td style="width:200px">{{  $task->assigned_by_country }}</td>
                         <td style="width:150px">
                             @if ($task->assigned_to == auth()->user()->user_name)
                                 {{ __('Myself') }}
@@ -71,12 +71,12 @@
                                 {{  $task->assigned_to }}
                             @endif
                         </td>
-                        <td style="width:150px">{{  $task->assigned_to_country }}</td>
-                        <td style="width:150px">{{  $task->assign_date }}</td>
+                        <td style="width:200px">{{  $task->assigned_to_country }}</td>
+                        <td style="width:235px">{{  Carbon\Carbon::parse($task->assign_date)->format('jS F, Y') }}</td>
                         <td style="width:100px">{{  $task->status }}</td>
                         <td style="width:200px">
-                            <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="">Edit</a>
-                            <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal">Delete</a>
+                            <a class="btn btn-warning" style="color:darkslategray; width:75px; height:35px;display:inline" href="{{ route('tasks.overview.editOverview', $task->id) }}">Edit</a>
+                            <a class="btn btn-danger" style="color:darkslategray; width:75px; height:35px;" data-toggle="modal" data-target="#deleteModal{{$task->id}}">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -94,3 +94,27 @@
 </div>
 
 @endsection
+
+<!--Delete Modal -->
+@foreach ($tasks as $task)
+    <div class="modal fade" id="deleteModal{{$task->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <form action="{{ route('tasks.overview.destroyOverview', $task->id) }}" method="post">
+            @csrf
+            @method('Delete')
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete task <b>{{ $task->title}}</b> ?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('No')}}</button>
+                        <button type="submit" class="btn btn-secondary">{{__('Yes')}}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+@endforeach

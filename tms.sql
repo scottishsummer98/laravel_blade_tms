@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 02, 2021 at 12:17 PM
+-- Generation Time: Dec 06, 2021 at 10:03 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.25
 
@@ -40,12 +40,12 @@ CREATE TABLE `continents` (
 --
 
 INSERT INTO `continents` (`id`, `con_code`, `con_name`, `created_at`, `updated_at`) VALUES
-(1, 'AF', 'Africa', '2021-12-02 04:52:59', '2021-12-02 04:52:59'),
-(3, 'EU', 'Europe', '2021-12-02 04:53:07', '2021-12-02 04:53:07'),
-(4, 'NA', 'North America', '2021-12-02 04:53:15', '2021-12-02 04:53:15'),
-(5, 'OC', 'Oceania', '2021-12-02 04:53:24', '2021-12-02 04:53:24'),
-(6, 'AS', 'Asia', '2021-12-02 04:53:48', '2021-12-02 04:53:48'),
-(7, 'SA', 'South America', '2021-12-02 04:53:53', '2021-12-02 04:53:53');
+(1, 'AF', 'Africa', '2021-12-05 23:48:58', '2021-12-05 23:48:58'),
+(2, 'AS', 'Asia', '2021-12-05 23:49:03', '2021-12-05 23:49:03'),
+(3, 'EU', 'Europe', '2021-12-05 23:49:08', '2021-12-05 23:49:08'),
+(4, 'NA', 'North America', '2021-12-05 23:49:14', '2021-12-05 23:49:14'),
+(5, 'OC', 'Oceania', '2021-12-05 23:49:20', '2021-12-05 23:49:20'),
+(6, 'SA', 'South America', '2021-12-05 23:49:24', '2021-12-05 23:49:24');
 
 -- --------------------------------------------------------
 
@@ -67,18 +67,18 @@ CREATE TABLE `countries` (
 --
 
 INSERT INTO `countries` (`id`, `con_code`, `coun_code`, `coun_name`, `created_at`, `updated_at`) VALUES
-(1, 'OC', 'AU', 'Australia', '2021-12-02 04:54:16', '2021-12-02 04:54:16'),
-(2, 'AS', 'BD', 'Bangladesh', '2021-12-02 04:54:23', '2021-12-02 04:54:23'),
-(3, 'SA', 'BR', 'Brazil', '2021-12-02 04:54:31', '2021-12-02 04:54:31'),
-(4, 'EU', 'FR', 'France', '2021-12-02 04:54:39', '2021-12-02 04:54:39'),
-(5, 'EU', 'DE', 'Germany', '2021-12-02 04:54:47', '2021-12-02 04:54:47'),
-(6, 'AS', 'IN', 'India', '2021-12-02 04:54:55', '2021-12-02 04:54:55'),
-(7, 'OC', 'NZ', 'New Zealand', '2021-12-02 04:55:02', '2021-12-02 04:55:02'),
-(8, 'AF', 'ZA', 'South Africa', '2021-12-02 04:55:11', '2021-12-02 04:55:11'),
-(9, 'EU', 'ES', 'Spain', '2021-12-02 04:55:21', '2021-12-02 04:55:21'),
-(10, 'EU', 'GB', 'United Kingdom', '2021-12-02 04:55:33', '2021-12-02 04:55:33'),
-(11, 'NA', 'US', 'United States Of America', '2021-12-02 04:55:43', '2021-12-02 04:55:43'),
-(12, 'SA', 'AR', 'Argentina', '2021-12-02 04:55:51', '2021-12-02 04:55:51');
+(1, 'SA', 'AR', 'Argentina', '2021-12-05 23:49:49', '2021-12-05 23:49:49'),
+(2, 'OC', 'AU', 'Australia', '2021-12-05 23:50:01', '2021-12-05 23:50:01'),
+(3, 'AS', 'BD', 'Bangladesh', '2021-12-05 23:50:08', '2021-12-05 23:50:08'),
+(4, 'SA', 'BR', 'Brazil', '2021-12-05 23:50:18', '2021-12-05 23:50:18'),
+(5, 'EU', 'FR', 'France', '2021-12-05 23:50:27', '2021-12-05 23:50:27'),
+(6, 'EU', 'DE', 'Germany', '2021-12-05 23:50:35', '2021-12-05 23:50:35'),
+(7, 'AS', 'IN', 'India', '2021-12-05 23:50:45', '2021-12-05 23:50:45'),
+(8, 'OC', 'NZ', 'New Zealand', '2021-12-05 23:50:55', '2021-12-05 23:50:55'),
+(9, 'AF', 'ZA', 'South Africa', '2021-12-05 23:51:05', '2021-12-05 23:51:05'),
+(10, 'EU', 'ES', 'Spain', '2021-12-05 23:51:16', '2021-12-05 23:51:16'),
+(11, 'EU', 'GB', 'United Kingdom', '2021-12-05 23:51:29', '2021-12-05 23:51:29'),
+(12, 'NA', 'US', 'United States Of America', '2021-12-05 23:51:39', '2021-12-05 23:51:39');
 
 -- --------------------------------------------------------
 
@@ -117,9 +117,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(17, '2021_11_21_085833_create_tasks_table', 2),
-(18, '2021_11_21_090003_create_countries_table', 2),
-(19, '2021_11_21_090030_create_continents_table', 2);
+(20, '2021_11_21_085833_create_tasks_table', 2),
+(21, '2021_11_21_090003_create_countries_table', 2),
+(22, '2021_11_21_090030_create_continents_table', 2);
 
 -- --------------------------------------------------------
 
@@ -165,7 +165,7 @@ CREATE TABLE `tasks` (
   `assigned_by_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `assigned_to` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `assigned_to_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `assign_date` datetime NOT NULL,
+  `assign_date` date NOT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -176,12 +176,17 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `title`, `description`, `assigned_by`, `assigned_by_country`, `assigned_to`, `assigned_to_country`, `assign_date`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Alien Invasion', 'Save world from alien invasion', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-01 16:56:00', 'Queue', '2021-12-02 04:56:28', '2021-12-02 04:56:28'),
-(2, 'Help alien invasion', 'Help me save world from alien invasion Thor', 'scottishsummer', 'Bangladesh', 'thor299', 'Australia', '2021-12-01 16:01:00', 'Assigned', '2021-12-02 04:58:03', '2021-12-02 04:58:03'),
-(3, 'Save MILIL', 'Save MILIL from distruction', 'ghanimiah', 'Bangladesh', 'ghanimiah', 'Bangladesh', '2021-11-17 09:13:00', 'Doing', '2021-12-02 05:09:38', '2021-12-02 05:09:38'),
-(4, 'Help me save MILIL', 'Help me save Milil Sami', 'ghanimiah', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-11-28 20:12:00', 'Assigned', '2021-12-02 05:10:14', '2021-12-02 05:10:14'),
-(5, 'MCU Film', 'Hey, I am producing a new MCU Film. Do this movie for me.', 'ghanimiah', 'Bangladesh', 'wolvering123', 'Australia', '2021-10-20 07:14:00', 'Assigned', '2021-12-02 05:13:18', '2021-12-02 05:13:18'),
-(6, 'POP Film', 'I am making a new Prince of Persia movie. Be my actress here.', 'ghanimiah', 'Bangladesh', 'pollytamina', 'United Kingdom', '2021-09-29 06:14:00', 'Assigned', '2021-12-02 05:14:11', '2021-12-02 05:14:11');
+(1, 'Finish mod request', 'Finish modification request module before 14th December 2021', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-14', 'Assigned', '2021-12-05 23:52:35', '2021-12-05 23:52:35'),
+(2, 'MCU film', 'Star in my new MCU film. You will be the main here cast against Gemma Atherton', 'scottishsummer', 'Bangladesh', 'miristiak', 'Bangladesh', '2021-12-01', 'Assigned', '2021-12-05 23:53:43', '2021-12-05 23:53:43'),
+(4, 'Mafia film', 'Hello Mr. Sami. Star in my new film on 1960\'s American mafia family.', 'mscorsese', 'United States Of America', 'scottishsummer', 'Bangladesh', '2021-12-04', 'Done', '2021-12-05 23:58:22', '2021-12-06 04:00:10'),
+(5, 'Mapia Mobie', 'Eshtar in mai naxt mafiya pilm Mr. Ghani pom Nilpamari', 'ajstar', 'Bangladesh', 'ghanimiah', 'Bangladesh', '2021-11-30', 'Doing', '2021-12-06 00:00:40', '2021-12-06 01:54:17'),
+(6, 'Bangla Movie', 'Act in my new Bangla Cinema titled অদ্ভুত প্রেম', 'scottishsummer', 'Bangladesh', 'wolvering123', 'Australia', '2021-11-15', 'Assigned', '2021-12-06 00:52:25', '2021-12-06 01:39:28'),
+(7, 'Task Module', 'Made Task module in IMS', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-11-17', 'Done', '2021-12-06 00:52:53', '2021-12-06 00:52:53'),
+(9, 'Modifications', 'Modify IMS modules as per request after the new in charge joins', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-12', 'Doing', '2021-12-06 01:04:04', '2021-12-06 04:00:44'),
+(10, 'MCU film', 'Star in my next MCU film. You will act with Mr. Istiak Tarek. A prominent actor from Bangladesh. You will play the role of electra.', 'scottishsummer', 'Bangladesh', 'pollytamina', 'United Kingdom', '2021-12-03', 'Assigned', '2021-12-06 01:05:03', '2021-12-06 01:05:03'),
+(11, 'Shutter Island 2', 'I am remaking a Shutter Island sequel. I would love to have you on board Mr. Ghani', 'mscorsese', 'United States Of America', 'ghanimiah', 'Bangladesh', '2021-12-05', 'Assigned', '2021-12-06 01:57:50', '2021-12-06 01:57:50'),
+(12, 'Save MILIL', 'Help me save MILIL from destruction Mr. Sami.', 'ghanimiah', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-08', 'Doing', '2021-12-06 01:59:30', '2021-12-06 04:00:23'),
+(13, 'Save MILIL', 'Help me save MILIL from destruction.', 'ghanimiah', 'Bangladesh', 'priom007', 'Bangladesh', '2021-12-03', 'Assigned', '2021-12-06 02:01:32', '2021-12-06 04:01:51');
 
 -- --------------------------------------------------------
 
@@ -229,7 +234,10 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `country`, `e
 (84, 'Chris', 'Hemsworth', 'thor299', 'Australia', 'iamthor@gmail.com', NULL, '$2y$10$T4CAmh3KTZdjTQzGXr/frOLGZKCHaO7BqpzRHBNz2WTUWoo6kEj/2', NULL, '2021-11-29 03:52:43', '2021-12-02 04:57:09'),
 (85, 'Francisco', 'Isco', 'isco22', 'Spain', 'isco22@gmail.com', NULL, '$2y$10$P6qbfwMN3.dISsYjDNCkV.10VrFW0H1XRuVulpLKE5YPwiqL9Yn32', NULL, '2021-11-29 03:53:47', '2021-11-29 03:53:47'),
 (86, 'Russel', 'Crowe', 'rcrowe', 'New Zealand', 'crowe@gmail.com', NULL, '$2y$10$e/unU9FoSP3MFq9f27zlSOUX44.up8C.cKolV51gj7Sba60jdhaUG', NULL, '2021-11-29 03:55:14', '2021-11-29 03:55:14'),
-(87, 'Rezwanul', 'Ghani', 'ghanimiah', 'Bangladesh', 'ghanimiah@gmail.com', NULL, '$2y$10$cpkY44bwLyBBHa2UUwMlW.E.x8HSF8GFZLHk2AjbWmfEgRC4iQMpy', NULL, '2021-12-02 05:08:10', '2021-12-02 05:08:10');
+(87, 'Rezwanul', 'Ghani', 'ghanimiah', 'Bangladesh', 'ghanimiah@gmail.com', NULL, '$2y$10$cpkY44bwLyBBHa2UUwMlW.E.x8HSF8GFZLHk2AjbWmfEgRC4iQMpy', NULL, '2021-12-02 05:08:10', '2021-12-02 05:08:10'),
+(88, 'Istiak', 'Tarek', 'miristiak', 'Bangladesh', 'miristiak@gmail.com', NULL, '$2y$10$jdU27RmfjWFEjBPfFlRfI.2/3yeDdIa5wyX4MSD3BhnE3Ae6EzH4S', NULL, '2021-12-04 23:12:51', '2021-12-04 23:12:51'),
+(89, 'Martin', 'Scorsese', 'mscorsese', 'United States Of America', 'martin@gmail.com', NULL, '$2y$10$p66nHwhoNupKmtZZv7g.POABEgNJhbLvChMd7tEXQMvN.EMgl3QiW', NULL, '2021-12-05 23:57:23', '2021-12-05 23:57:23'),
+(90, 'Sharif', 'Alam', 'priom007', 'Bangladesh', 'priom007@gmail.com', NULL, '$2y$10$4pZpFcxH5lHYYQrjIR/je.LGxf8oFVPVKYMLRt67Gc7MVqpltCg6K', NULL, '2021-12-06 02:00:42', '2021-12-06 02:00:42');
 
 --
 -- Indexes for dumped tables
@@ -295,7 +303,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `continents`
 --
 ALTER TABLE `continents`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -313,7 +321,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -325,13 +333,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
