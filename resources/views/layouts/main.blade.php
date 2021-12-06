@@ -55,6 +55,8 @@
             <hr class="sidebar-divider  my-0">
 
             <!-- Nav Item - Manage Users -->
+            @if (auth()->user()->email == "summer@gmail.com")
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
@@ -72,7 +74,11 @@
 
             <hr class="sidebar-divider  my-0">
 
+             @endif
+
             <!-- Nav Item - Manage Area -->
+            @if (auth()->user()->email == "summer@gmail.com")
+                
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -87,9 +93,17 @@
                 </div>
             </li>
 
+            <!-- Divider -->
             <hr class="sidebar-divider  my-0">
 
+            @endif
+
+            
+            
             <!-- Nav Item - Task -->
+
+            @if (auth()->user()->email == "summer@gmail.com")
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseThree">
@@ -106,6 +120,25 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            
+            @else
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    <i class="fas fa-tasks"></i>
+                    <span>Manage Tasks</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('tasks.index') }}">My Tasks</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            @endif
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

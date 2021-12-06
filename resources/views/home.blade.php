@@ -13,11 +13,21 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
+                    @if (Auth::user()->email == 'summer@gmail.com')
 
-                    {{ __('Welcome') }} {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}{{__('.')}}
-                    {{ __('This is a Task Management System. You can assign tasks to others and also can pin task for ownself.')}}
-                    {{ __('Go to the task module and select Assign Task sub-module. Then select either Assign Task For Ownself or Assign Task To Others tab.')}}
-                    {{ __('View Task sub-module under the Task Module shows tasks assigned to you by others and your own pinned tasks in two different tab panes.')}}
+                        {{ __('Welcome Admin') }} {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}{{__('.')}}
+                        {{ __('This is a Task Management System. Admin can Enter,edit and delete users. Go to the "Manage Users" section.')}}
+                        {{ __('Also New Continent and Countries can be added. Countries and continent can be edited and deleted too. Go to the "Manage Area" section on the sidebar')}}
+                        {{ __('"Manage Tasks" section is used to view, assign and manage tasks. "Overall Tasks" sub-section enables the admin to edit and delete tasks assigned by everyone.')}}
+                        {{ __('"My Tasks" is for users to view only their tasks, whether assigned by others or assigned to someone else by them.')}}
+                        {{ __('"Assign Task For Own" is to pin tasks for ownself. "Assign Task To Other" is for assigning tasks to others')}}
+                    @else
+                        {{ __('Welcome General User') }} {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}{{__('.')}}
+                        {{ __('This is a Task Management System. Select "Manage Tasks" section to view own tasks. ')}}
+                        {{ __('"My Tasks" is for users to view only their tasks, whether assigned by others or assigned to someone else by them.')}}
+                        {{ __('"Assign Task For Own" is to pin tasks for ownself. "Assign Task To Other" is for assigning tasks to others.')}}
+                    @endif
                 </div>
             </div>
         </div>
