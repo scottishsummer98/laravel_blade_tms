@@ -28,6 +28,7 @@ class UserUpdateRequest extends FormRequest
             'last_name' => ['required', 'string', 'max:255'],
             'user_name' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string', 'regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/', 'confirmed'],
         ];
     }
 

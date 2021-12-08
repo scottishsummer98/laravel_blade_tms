@@ -59,7 +59,13 @@ class UserController extends Controller
 
     public function update(UserUpdateRequest $request, User $user)
     {
-        $user->update($request->all());
+        $user->update([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'user_name' => $request->user_name,
+            'country' => $request->country,
+            'password' => Hash::make($request->password),
+        ]);
         return redirect()->route('users.index')->with('message', 'User Updated Successfully');
     }
 
