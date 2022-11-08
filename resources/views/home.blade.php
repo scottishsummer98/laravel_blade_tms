@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     
-                    @if (Auth::user()->email == 'summer@gmail.com')
+                    @if (Auth::user()->email == 'samiremail98@gmail.com')
 
                         {{ __('Welcome Admin') }} {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}{{__('.')}}
                         {{ __('This is a Task Management System. Admin can Enter,edit and delete users. Go to the "Manage Users" section.')}}

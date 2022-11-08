@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 06, 2021 at 10:03 AM
+-- Generation Time: Nov 08, 2022 at 07:21 PM
 -- Server version: 5.7.33
--- PHP Version: 7.4.25
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -176,17 +176,10 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `title`, `description`, `assigned_by`, `assigned_by_country`, `assigned_to`, `assigned_to_country`, `assign_date`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Finish mod request', 'Finish modification request module before 14th December 2021', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-14', 'Assigned', '2021-12-05 23:52:35', '2021-12-05 23:52:35'),
-(2, 'MCU film', 'Star in my new MCU film. You will be the main here cast against Gemma Atherton', 'scottishsummer', 'Bangladesh', 'miristiak', 'Bangladesh', '2021-12-01', 'Assigned', '2021-12-05 23:53:43', '2021-12-05 23:53:43'),
-(4, 'Mafia film', 'Hello Mr. Sami. Star in my new film on 1960\'s American mafia family.', 'mscorsese', 'United States Of America', 'scottishsummer', 'Bangladesh', '2021-12-04', 'Done', '2021-12-05 23:58:22', '2021-12-06 04:00:10'),
-(5, 'Mapia Mobie', 'Eshtar in mai naxt mafiya pilm Mr. Ghani pom Nilpamari', 'ajstar', 'Bangladesh', 'ghanimiah', 'Bangladesh', '2021-11-30', 'Doing', '2021-12-06 00:00:40', '2021-12-06 01:54:17'),
-(6, 'Bangla Movie', 'Act in my new Bangla Cinema titled অদ্ভুত প্রেম', 'scottishsummer', 'Bangladesh', 'wolvering123', 'Australia', '2021-11-15', 'Assigned', '2021-12-06 00:52:25', '2021-12-06 01:39:28'),
-(7, 'Task Module', 'Made Task module in IMS', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-11-17', 'Done', '2021-12-06 00:52:53', '2021-12-06 00:52:53'),
-(9, 'Modifications', 'Modify IMS modules as per request after the new in charge joins', 'scottishsummer', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-12', 'Doing', '2021-12-06 01:04:04', '2021-12-06 04:00:44'),
-(10, 'MCU film', 'Star in my next MCU film. You will act with Mr. Istiak Tarek. A prominent actor from Bangladesh. You will play the role of electra.', 'scottishsummer', 'Bangladesh', 'pollytamina', 'United Kingdom', '2021-12-03', 'Assigned', '2021-12-06 01:05:03', '2021-12-06 01:05:03'),
-(11, 'Shutter Island 2', 'I am remaking a Shutter Island sequel. I would love to have you on board Mr. Ghani', 'mscorsese', 'United States Of America', 'ghanimiah', 'Bangladesh', '2021-12-05', 'Assigned', '2021-12-06 01:57:50', '2021-12-06 01:57:50'),
-(12, 'Save MILIL', 'Help me save MILIL from destruction Mr. Sami.', 'ghanimiah', 'Bangladesh', 'scottishsummer', 'Bangladesh', '2021-12-08', 'Doing', '2021-12-06 01:59:30', '2021-12-06 04:00:23'),
-(13, 'Save MILIL', 'Help me save MILIL from destruction.', 'ghanimiah', 'Bangladesh', 'priom007', 'Bangladesh', '2021-12-03', 'Assigned', '2021-12-06 02:01:32', '2021-12-06 04:01:51');
+(14, 'Add TMS to Portfolio', 'Add the Task Management System project to the react portfolio and deploy to netlify', 'scottishsummer98', 'Bangladesh', 'scottishsummer98', 'Bangladesh', '2022-11-09', 'Doing', '2022-11-08 13:04:57', '2022-11-08 13:04:57'),
+(16, 'Actor needed', 'Please play as my main hero in my next film.', 'mscorsese', 'United States Of America', 'scottishsummer98', 'Bangladesh', '2017-05-08', 'Assigned', '2022-11-08 13:13:27', '2022-11-08 13:13:27'),
+(17, 'Ask Martin about me', 'Tell Martin I am an aspiring actor. Please if he could take me in his next movie as you two are so close', 'mgood123', 'United States Of America', 'scottishsummer98', 'Bangladesh', '2022-11-06', 'Assigned', '2022-11-08 13:16:03', '2022-11-08 13:16:03'),
+(18, 'Hangout With me', 'Hey, I am back fromt2 world cup. Let\'s meet up soon', 'Shakib75', 'Bangladesh', 'scottishsummer98', 'Bangladesh', '2022-11-18', 'Assigned', '2022-11-08 13:19:16', '2022-11-08 13:19:16');
 
 -- --------------------------------------------------------
 
@@ -213,31 +206,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `country`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(12, 'Shakib', 'Al Hasan', 'Shakib75', 'Bangladesh', 'sulh1h9C6f@gmail.com', NULL, '$2y$10$FAca69nDi9B385kJcplArekIz1M8WU.w1S7yQ0JAqcIaHXgZL02RO', NULL, NULL, NULL),
-(16, 'Mahendra', 'Singh Dhoni', 'MSDcaptaincool', 'India', 'vhVd91hJa1@gmail.com', NULL, '$2y$10$FlF6kkxItlXurWOZ.4ZqAeLBT7qLQmBJ2VBoRwOQiV0t9VncmBmyW', NULL, NULL, NULL),
-(17, 'Katrina', 'Kaif', 'kkaif123', 'India', 'GB0mMmqmvl@gmail.com', NULL, '$2y$10$1pyn/nmTXSuGvCFvIhYbGO2vbA9Relb.g3uUuW7l16rzpFw1B1lfy', NULL, NULL, NULL),
-(22, 'Karim', 'Benzema', 'bigboykb', 'France', 'HfwPkN1hUg@gmail.com', NULL, '$2y$10$Z2TU7nOzUFquliySIi9mgOLGmjWlU.sRh6i8CaOmbVgP5IWEr51R.', NULL, NULL, NULL),
-(23, 'Melanie', 'Laurent', 'shoshanna83', 'France', 'KwyQLiQguu@gmail.com', NULL, '$2y$10$JdKqFGsSnInGuEYor5d0jOWFwEDvwpchk1WAKw7N3pXp2NLfjFdIO', NULL, NULL, NULL),
-(24, 'Mesut', 'Ozil', 'playmaker10', 'Germany', 'IEvRmAqW2E@gmail.com', NULL, '$2y$10$2JYXLK1IQh9vQnmLU4a1WOPnM.KEbQ9PF5hX2Bmsn5.udLv6rPV.G', NULL, NULL, NULL),
-(25, 'Toni', 'Kroos', 'germansniper08', 'Germany', 'LMxRpOqK1G@gmail.com', NULL, '$2y$10$TOIm43EE.qQ7j0bpBS7f7.Ep602ZffYOqYjiOsQxTP3KNnoB054w6', NULL, NULL, NULL),
-(30, 'Gemma', 'Arterton', 'pollytamina', 'United Kingdom', 'xRMd0UcBtA@gmail.com', NULL, '$2y$10$8lgeIcUTAYVFMgYyPjX8/.bJgFuzrlvvGGh81dVg3/lVEMyeYuq26', NULL, NULL, NULL),
-(62, 'Samiur', 'Rahman', 'scottishsummer', 'Bangladesh', 'summer@gmail.com', NULL, '$2y$10$P9MAdtyAi3spj8IA1G4HEuIzARsGPj1Zmomjt3sarqUkdTyiMM.Em', NULL, '2021-11-21 04:41:09', '2021-11-21 04:41:09'),
-(63, 'Alastair', 'Cook', 'acook2684', 'United Kingdom', 'batbatcook@gmail.com', NULL, '$2y$10$QGSmMtNgWfT0a76DrcLI0OLt11NFOLMNkjUvmulJ48S4FlHZxrZoO', NULL, '2021-11-22 04:20:22', '2021-11-22 04:20:22'),
-(69, 'Nelson', 'Mendela', 'nelsonM', 'South Africa', 'nelson123@gmail.com', NULL, '$2y$10$ebyfsYgTEEWNMug6cg3pQ.li7.Gm4RCi6qHECB.0VCs9HVrlakiIW', NULL, '2021-11-28 22:45:15', '2021-11-29 00:11:21'),
-(71, 'Lionel', 'Messi', 'leo10', 'Argentina', 'leo10@gmail.com', NULL, '$2y$10$t8gkOD/nfGNslh1jAtEsDurPay/ctNaK.CUB7O7FxK/2qhZNYvPn2', NULL, '2021-11-28 22:50:15', '2021-11-29 03:38:37'),
-(77, 'Sergio', 'Agüero', 'kunagüero', 'Argentina', 'kumkun10@gmail.com', NULL, '$2y$10$GyurICXCF8mQGdSlD9tRYO.Ug0Lwxy7OdyaE1qZ13bXTeyDEoQ/cG', NULL, '2021-11-29 03:41:40', '2021-11-29 03:41:40'),
-(78, 'Hugh', 'Jackman', 'wolvering123', 'Australia', 'xmen@gmail.com', NULL, '$2y$10$OI9c4x4bTmugzqiidx1wHeAWUDFhdnWW7z.8f4yA.NP6d.3MJnwme', NULL, '2021-11-29 03:42:48', '2021-11-29 03:42:48'),
-(79, 'Brett', 'Lee', 'speedstarlee', 'Australia', 'aclee@gmail.com', NULL, '$2y$10$A2FfbtmOws9VoMNpxbdwIeWpFcN22Vt7A59acaaOoZc7Fq35GesBG', NULL, '2021-11-29 03:43:49', '2021-11-29 03:43:49'),
-(81, 'Meagan', 'Good', 'mgood123', 'United Kingdom', 'meagan@gmail.com', NULL, '$2y$10$MBoEap6jAMiInzZaX03eguMMx1KK8nLkNX2n81Z86UaH9OoOXa5lq', NULL, '2021-11-29 03:49:17', '2021-11-29 03:49:17'),
-(82, 'Ananta', 'Jalil', 'ajstar', 'Bangladesh', 'ajstar@gmail.com', NULL, '$2y$10$ok2E2pQVX.Xr7ps9hvkJIeiZ8fjIEntRTRQ6gGA4I18ALra0DJ882', NULL, '2021-11-29 03:51:23', '2021-11-29 03:51:23'),
-(83, 'Jaya', 'Ahsan', 'jaya123', 'Bangladesh', 'jaya83@gmail.com', NULL, '$2y$10$sk8EGE1Bf1XOzTTGxGMS2uJKPM5pQo3By1FwTUnwTLPb6AmT1jHfC', NULL, '2021-11-29 03:51:45', '2021-11-29 03:51:45'),
-(84, 'Chris', 'Hemsworth', 'thor299', 'Australia', 'iamthor@gmail.com', NULL, '$2y$10$T4CAmh3KTZdjTQzGXr/frOLGZKCHaO7BqpzRHBNz2WTUWoo6kEj/2', NULL, '2021-11-29 03:52:43', '2021-12-02 04:57:09'),
-(85, 'Francisco', 'Isco', 'isco22', 'Spain', 'isco22@gmail.com', NULL, '$2y$10$P6qbfwMN3.dISsYjDNCkV.10VrFW0H1XRuVulpLKE5YPwiqL9Yn32', NULL, '2021-11-29 03:53:47', '2021-11-29 03:53:47'),
-(86, 'Russel', 'Crowe', 'rcrowe', 'New Zealand', 'crowe@gmail.com', NULL, '$2y$10$e/unU9FoSP3MFq9f27zlSOUX44.up8C.cKolV51gj7Sba60jdhaUG', NULL, '2021-11-29 03:55:14', '2021-11-29 03:55:14'),
-(87, 'Rezwanul', 'Ghani', 'ghanimiah', 'Bangladesh', 'ghanimiah@gmail.com', NULL, '$2y$10$cpkY44bwLyBBHa2UUwMlW.E.x8HSF8GFZLHk2AjbWmfEgRC4iQMpy', NULL, '2021-12-02 05:08:10', '2021-12-02 05:08:10'),
-(88, 'Istiak', 'Tarek', 'miristiak', 'Bangladesh', 'miristiak@gmail.com', NULL, '$2y$10$jdU27RmfjWFEjBPfFlRfI.2/3yeDdIa5wyX4MSD3BhnE3Ae6EzH4S', NULL, '2021-12-04 23:12:51', '2021-12-04 23:12:51'),
-(89, 'Martin', 'Scorsese', 'mscorsese', 'United States Of America', 'martin@gmail.com', NULL, '$2y$10$p66nHwhoNupKmtZZv7g.POABEgNJhbLvChMd7tEXQMvN.EMgl3QiW', NULL, '2021-12-05 23:57:23', '2021-12-05 23:57:23'),
-(90, 'Sharif', 'Alam', 'priom007', 'Bangladesh', 'priom007@gmail.com', NULL, '$2y$10$4pZpFcxH5lHYYQrjIR/je.LGxf8oFVPVKYMLRt67Gc7MVqpltCg6K', NULL, '2021-12-06 02:00:42', '2021-12-06 02:00:42');
+(12, 'Shakib', 'Al Hasan', 'Shakib75', 'Bangladesh', 'sulh1h9C6f@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, NULL, NULL),
+(22, 'Karim', 'Benzema', 'bigboykb', 'France', 'HfwPkN1hUg@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, NULL, NULL),
+(69, 'Nelson', 'Mendela', 'nelsonM', 'South Africa', 'nelson123@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2021-11-28 22:45:15', '2021-11-29 00:11:21'),
+(77, 'Sergio', 'Agüero', 'kunagüero', 'Argentina', 'kumkun10@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2021-11-29 03:41:40', '2021-11-29 03:41:40'),
+(81, 'Meagan', 'Good', 'mgood123', 'United States Of America', 'meagan@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2021-11-29 03:49:17', '2021-11-29 03:49:17'),
+(86, 'Russel', 'Crowe', 'rcrowe', 'New Zealand', 'crowe@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2021-11-29 03:55:14', '2021-11-29 03:55:14'),
+(89, 'Martin', 'Scorsese', 'mscorsese', 'United States Of America', 'martin@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2021-12-05 23:57:23', '2021-12-05 23:57:23'),
+(92, 'Samiur', 'Rahman', 'scottishsummer98', 'Bangladesh', 'samiremail98@gmail.com', NULL, '$2y$10$FJVr5BRDJSUQGTs77mIa/.KCXyCUrx1s4fTt5trMBI1AOffa5c/7q', NULL, '2022-11-08 11:28:20', '2022-11-08 11:28:20');
 
 --
 -- Indexes for dumped tables
@@ -333,13 +309,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -55,7 +55,7 @@
             <hr class="sidebar-divider  my-0">
 
             <!-- Nav Item - Manage Users -->
-            @if (auth()->user()->email == "summer@gmail.com")
+            @if (auth()->user()->email == "samiremail98@gmail.com")
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
@@ -77,7 +77,7 @@
              @endif
 
             <!-- Nav Item - Manage Area -->
-            @if (auth()->user()->email == "summer@gmail.com")
+            @if (auth()->user()->email == "samiremail98@gmail.com")
                 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -102,7 +102,7 @@
             
             <!-- Nav Item - Task -->
 
-            @if (auth()->user()->email == "summer@gmail.com")
+            @if (auth()->user()->email == "samiremail98@gmail.com")
             
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
